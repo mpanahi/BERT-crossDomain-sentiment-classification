@@ -1,6 +1,6 @@
 import pandas as pd
 
-dataset_dataframe=pd.read_csv("drive/MyDrive/cmts_final2.csv",usecols=["text","label"])
+dataset_dataframe=pd.read_csv("drive/MyDrive/cmts_final.csv",usecols=["text","label"])
 train_test_ratio=0.8
 train_test_sep=int(train_test_ratio*len(dataset_dataframe))
 print(train_test_sep)
