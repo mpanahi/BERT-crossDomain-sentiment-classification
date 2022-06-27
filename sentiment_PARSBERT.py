@@ -11,7 +11,7 @@ train_dataframe=dataset_dataframe[0:train_test_sep]
 print(len(train_dataframe))
 test_dataframe=dataset_dataframe[train_test_sep:len(dataset_dataframe)]
 tokenizer=AutoTokenizer.from_pretrained("HooshvareLab/bert-fa-zwnj-base")
-torch.save(tokenizer, "drive/MyDrive/tokenizer_bert")
+
 
 logits_ls = []
 asl_neg_test = []
@@ -27,12 +27,12 @@ import numpy as np
 
 
 
-# print(np.argmax(logits,axis=-1)[0])
+
 
 import torch
 from torch.utils.data import Dataset, DataLoader
 
-MAX_LEN=32
+MAX_LEN=512
 device="cuda"
 
 class SentimentDataset(Dataset):
